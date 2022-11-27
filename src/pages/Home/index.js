@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
-import Jumbo from '../../Components/Jumbo';
+import Jumbo from '../../components/Jumbo';
 import axios from 'axios';
-import RecipeContainer from '../../Components/RecipeContainer';
+import RecipeContainer from '../../components/RecipeContainer';
 import React, { Component, useContext }  from 'react';
 import { MyContext } from '../../context';
 
