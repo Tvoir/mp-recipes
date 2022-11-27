@@ -1,11 +1,21 @@
 import React , { useState }from "react";
 import { Form, Button } from "react-bootstrap";
-
-function Signup(){
+import axios from "axios";
+function Signup() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    function handleSignup(e) {
+      e.preventDefault();
+      if (!email || !password) {
+        return alert("Please fill out the fields");
+      }
+      axios
+        .post("http://localhost:5000/users", { email, password })
+        .then(({ data }) => console.log(data))
+        .catch((err) => console.log(err));
+    }
     return (
-        <Form>
+        <Form onSubmit={handleSignup}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control 
