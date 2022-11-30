@@ -16,8 +16,7 @@ function Jumbo() {
 
   return (
   <div className="jumbo">
-    <h1>Welcome</h1>
-    <h2>Find the best recipes here!</h2>
+    <h1 id="header1">Welcome</h1>
     <div className="button-input">
        <InputGroup className="mb-3">
         <FormControl
@@ -32,6 +31,7 @@ function Jumbo() {
         </Button>
       </InputGroup>
     </div>
+    <h2 id="header2">Find the best recipes here!</h2>
   </div>
   );
 

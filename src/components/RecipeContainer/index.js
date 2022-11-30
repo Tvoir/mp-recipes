@@ -6,7 +6,7 @@ import RecipeCard from "../RecipeCard";
 function RecipeContainer({ meals }) {
   // const [meals] = React.useState([]);
   return (
-    <div className='recipe-container'>
+    <div className='recipe-container row-cols-3 p-2 m-1' >
       {meals.map((meal) => (
         <RecipeCard {...meal} />
       // <RecipeCard key={meal.idMeal} {...meals} />
