@@ -15,7 +15,7 @@ function Jumbo() {
 
   return (
   <div className="jumbo">
-    <h1 id="header1">Recipe for Dummies</h1>
+    <h1 id="header1">Recipes for Dummies</h1>
     <div className="button-input">
        <InputGroup className="mb-3">
         <FormControl
