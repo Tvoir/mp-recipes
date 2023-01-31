@@ -4,9 +4,11 @@ import { InputGroup, FormControl, Button } from "react-bootstrap";
 import { MyContext } from "../../context"
 import axios from "axios"
 
+
+
 function Jumbo() {
   const [searchInput, setsearchInput] = useState("");
-  const {setMeals} = useContext(MyContext)
+  let setMeals: any = useContext(MyContext)
   function handleSearch(){
       axios
       .get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`)

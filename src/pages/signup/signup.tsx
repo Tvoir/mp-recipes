@@ -5,10 +5,10 @@ import axios from "axios";
 function Signup() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const {  setUser } = useContext(MyContext) || {};
+    let setUser: any = useContext(MyContext) || {};
 
 
-    function handleSignup(e) {
+    function handleSignup(e: { preventDefault: () => void; }) {
       e.preventDefault();
       if (!email || !password) {
         return alert("Please fill out the fields");

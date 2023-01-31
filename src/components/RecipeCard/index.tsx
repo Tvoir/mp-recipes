@@ -2,8 +2,13 @@ import React from 'react';
 import { Card } from "react-bootstrap";
 import RecipeModal from '../RecipeModal'
 
+interface RecipeCardStr {
+  meal: any
+  MealThumb: any
+  Instructions: any
+}
 
-function RecipeCard({strMeal, strMealThumb, strInstructions }) {
+function RecipeCard(strMeal: any, strMealThumb: any, strInstructions: any ) {
   return (
     <Card style={{ width: '14rem', margin: '10px', backgroundColor:'#8085a8', border:'solid'}}>
     <Card.Img variant="top" src={strMealThumb} />

@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 export const MyContext = createContext();
 
-function AppContext({ children }) {
+function AppContext( children: any ) {
   const [meals, setMeals] = useState([]);
   const [user, setUser] = useState(null);
 

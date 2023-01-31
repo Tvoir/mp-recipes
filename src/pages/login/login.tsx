@@ -8,9 +8,9 @@ import { MyContext } from "../../context";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const {setUser} = useContext(MyContext);
+  let setUser: any = useContext(MyContext);
 
-  function handleLogin(e) {
+  function handleLogin(e: { preventDefault: () => void; }) {
     e.preventDefault();
     if (!email || !password) {
       return alert("Please fill out the fields");

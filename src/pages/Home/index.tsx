@@ -7,7 +7,7 @@ import { MyContext } from '../../context';
 
 
 function Home() {
-  const {meals, setMeals} = useContext(MyContext)
+  let meals: any, setMeals: any = useContext(MyContext)
   useEffect(() =>{
         axios
           .get('https://www.themealdb.com/api/json/v1/1/search.php?s=chicken')

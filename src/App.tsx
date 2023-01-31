@@ -9,21 +9,21 @@ import {useContext} from "react";
 import { MyContext } from "./context"
 
 function App() {
-  const { user } = useContext(MyContext);
+  let  user: any = useContext(MyContext);
   return (
     <Router>
     <div className="Jumbo">
       <AppNavbar />
       <Routes>
-        <Route exact path="/" element={<Home />}>
+        <Route path="/" element={<Home />}>
           
         </Route>
         {!user && (
           <>
-        <Route exact path="/login" element={<Login/>}>
+        <Route path="/login" element={<Login/>}>
           
         </Route>
-        <Route exact path="/signup" element={<Signup/>}>
+        <Route path="/signup" element={<Signup/>}>
         </Route>
           </>
         )}
